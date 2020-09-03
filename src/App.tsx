@@ -1,11 +1,11 @@
 import React from "react"
-import styles from "./App.module.css"
+import "./App.css"
 
 import Main from "./components/main/main"
 
 function App() {
   return (
-    <div className={styles.App}>
+    <div className="App">
       <Main />
     </div>
   )

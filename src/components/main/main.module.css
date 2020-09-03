@@ -11,7 +11,7 @@
 .left {
   position: absolute;
   width: 100px;
-  height: 100%;
+  min-height: 1360px;
   left: 0px;
   top: 80px;
   background: #3b445c;
@@ -21,7 +21,7 @@
 .right {
   position: absolute;
   width: 318px;
-  height: 100%;
+  min-height: 1360px;
   right: 0px;
   top: 80px;
   background: #3b445c;
@@ -30,12 +30,8 @@
 
 .main {
   position: absolute;
-  left: 80px;
-  top: 80px;
-  min-height: 100%;
-  width: 100%;
-  background: linear-gradient(360deg, #283044 0%, rgba(40, 48, 68, 0.83) 100%),
-    url("../../images/Ashe_0.jpg");
-  background-size: cover;
-  z-index: -1;
+  left: 211px;
+  top: 160px;
+  right: 429px;
+  height: 20px;
 }
