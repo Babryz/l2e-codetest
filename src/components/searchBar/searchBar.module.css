@@ -13,11 +13,16 @@
   height: 45px;
   background: #5c6989;
   border-radius: 45px;
+  display: flex;
+  align-items: center;
 }
 
-.searchBar > input {
+.searchBar > form {
   position: relative;
   left: 35px;
+}
+
+.searchBar > form > input {
   height: 45px;
   width: 90%;
   background: #5c6989;
@@ -27,7 +32,7 @@
   color: #b2bbd5;
 }
 
-.searchBar > input::placeholder {
+.searchBar > form > input::placeholder {
   color: #b2bbd5;
   font-family: Roboto;
   font-style: italic;
@@ -37,8 +42,9 @@
 }
 .searchBar > img {
   position: relative;
-  left: 25px;
-  top: 5px;
+  left: 18px;
+  top: 0px;
   max-width: 20px;
   max-height: 20px;
+  transform: rotateZ(-20deg);
 }
