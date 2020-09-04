@@ -2,7 +2,8 @@ import React from "react"
 import styles from "./country.module.css"
 
 interface Props {
-  showDetails: Function
+  renderedFrom: string
+  showDetails: Function | null
   country: {
     code: string
     name: string
@@ -21,9 +22,22 @@ interface Props {
 }
 
 const Country = (props: Props) => {
+  const setFunction = (showDetails: Function | null, e: any) => {
+    if (showDetails !== null) {
+      return props.showDetails!(e)
+    }
+    return null
+  }
+
   const { country } = props
   return (
-    <div className={styles.container} id={country.code} onClick={(e) => props.showDetails(e)}>
+    <div
+      className={
+        props.renderedFrom === "details" ? styles.detailContainer : styles.regularContainer
+      }
+      id={country.code}
+      onClick={(e) => setFunction(props.showDetails, e)}
+    >
       <img src={`https://www.countryflags.io/${country.code}/flat/64.png`} />
       <div className={styles.info}>
         <h6>{country.name}</h6>

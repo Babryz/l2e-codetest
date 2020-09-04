@@ -41,7 +41,14 @@ export default function AllCountries(props: Props) {
         </div>
         <div className={styles.countries}>
           {data!.countries.slice(0, 8).map((country: CountryData, i: number) => {
-            return <Country key={i} country={country} showDetails={props.showDetails} />
+            return (
+              <Country
+                renderedFrom={"regular"}
+                key={i}
+                country={country}
+                showDetails={props.showDetails}
+              />
+            )
           })}
         </div>
       </div>

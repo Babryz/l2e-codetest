@@ -1,6 +1,6 @@
-.container {
-  width: 49%;
+.regularContainer {
   min-height: 121px;
+  width: 49%;
   left: 211px;
   top: 695px;
   background: #3b445c;
@@ -11,17 +11,37 @@
   cursor: pointer;
 }
 
-.container > * {
+.detailContainer {
+  min-height: 121px;
+  width: 90%;
+  left: 211px;
+  top: 695px;
+  background: #3b445c;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  margin-bottom: 24px;
+  display: flex;
+  cursor: pointer;
+}
+
+.regularContainer > * {
   pointer-events: none;
 }
 
-.container:hover {
+.regularContainer:hover {
   border: 1px solid #111010;
   box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
   width: 50%;
 }
 
-.container > img {
+.regularContainer > img {
+  margin: 24px 32px 24px 24px;
+  width: 113px;
+  height: 73px;
+  object-fit: cover;
+}
+
+.detailContainer > img {
   margin: 24px 32px 24px 24px;
   width: 113px;
   height: 73px;

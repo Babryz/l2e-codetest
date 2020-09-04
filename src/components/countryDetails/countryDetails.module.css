@@ -1,11 +1,83 @@
 .container {
-  display: none;
   position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+
+.box {
+  position: relative;
   z-index: 1;
-  max-width: 692px;
-  width: 100%;
-  top: 200px;
-  height: 600px;
+  width: 50%;
+  top: 10%;
+  left: 15%;
+  min-height: 70%;
   overflow: auto;
   background: #3b445c;
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  animation-name: modal;
+  animation-duration: 300ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+
+@keyframes modal {
+  0% {
+    max-height: 0;
+    max-width: 0;
+  }
+  100% {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading > img {
+  width: 234px;
+  height: 180px;
+  border-radius: 3px;
+}
+
+.heading > h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 40px;
+  text-align: center;
+  color: #cdd7ec;
+  margin-bottom: 4px;
+}
+
+.heading > h6 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #cdd7ec;
+}
+
+.countries {
+  padding: 32px;
+}
+
+.countries > p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 21px;
+  color: #cdd7ec;
+  padding: 16px;
 }

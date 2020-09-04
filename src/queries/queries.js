@@ -34,4 +34,28 @@ const searchCountriesQuery = gql`
   }
 `
 
-export { getCountriesQuery, searchCountriesQuery }
+const getDetailsQuery = gql`
+  query getDeatails($code: ID!) {
+    country(code: $code) {
+      code
+      name
+      continent {
+        name
+        countries {
+          code
+          name
+          capital
+          continent {
+            name
+          }
+          languages {
+            name
+          }
+          currency
+        }
+      }
+    }
+  }
+`
+
+export { getCountriesQuery, searchCountriesQuery, getDetailsQuery }

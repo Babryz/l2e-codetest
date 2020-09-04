@@ -16,7 +16,7 @@ const Main = () => {
   }
   const showDetails = (e: any) => {
     setCountryCode(e.target.id)
-    console.log(countryCode)
+    setIsOpen(!isOpen)
   }
   return (
     <>
@@ -28,7 +28,7 @@ const Main = () => {
           <SearchBar search={search} />
           {isOpen ? (
             <div>
-              <CountryDetails countryCode={"AE"} />
+              <CountryDetails countryCode={countryCode} />
             </div>
           ) : null}
 
