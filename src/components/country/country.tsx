@@ -1,7 +1,8 @@
 import React from "react"
 import styles from "./country.module.css"
 
-interface CountryProps {
+interface Props {
+  showDetails: Function
   country: {
     code: string
     name: string
@@ -19,10 +20,10 @@ interface CountryProps {
   }
 }
 
-const Country = (props: CountryProps) => {
+const Country = (props: Props) => {
   const { country } = props
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id={country.code} onClick={(e) => props.showDetails(e)}>
       <img src={`https://www.countryflags.io/${country.code}/flat/64.png`} />
       <div className={styles.info}>
         <h6>{country.name}</h6>

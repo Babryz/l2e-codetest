@@ -6,6 +6,7 @@ import styles from "./searchCountries.module.css"
 
 interface props {
   searchTerm: string
+  showDetails: Function
 }
 
 interface CountryData {
@@ -40,7 +41,6 @@ export default function SearchCountries(props: props) {
   if (loading) {
     return <div className={styles.loading}>loading...</div>
   } else {
-    console.log(data)
     return (
       <div className={styles.container}>
         <div className={styles.heading}>
@@ -51,7 +51,7 @@ export default function SearchCountries(props: props) {
         </div>
         <div className={styles.countries}>
           {data!.countries.slice(0, 8).map((country: CountryData, i: number) => {
-            return <Country key={i} country={country} />
+            return <Country key={i} country={country} showDetails={props.showDetails} />
           })}
         </div>
       </div>

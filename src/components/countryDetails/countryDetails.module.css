@@ -1,0 +1,11 @@
+.container {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  max-width: 692px;
+  width: 100%;
+  top: 200px;
+  height: 600px;
+  overflow: auto;
+  background: #3b445c;
+}

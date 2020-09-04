@@ -7,13 +7,13 @@ import { getCountriesQuery } from "../../queries/queries"
 
 interface props {
   searchTerm: string
+  showDetails: Function
 }
 
 export default function Countries(props: props) {
   if (props.searchTerm === "") {
-    return <AllCountries />
+    return <AllCountries showDetails={props.showDetails} />
   } else {
-    console.log(props.searchTerm)
-    return <SearchCountries searchTerm={props.searchTerm} />
+    return <SearchCountries showDetails={props.showDetails} searchTerm={props.searchTerm} />
   }
 }

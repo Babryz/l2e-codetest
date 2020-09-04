@@ -4,6 +4,10 @@ import { getCountriesQuery } from "../../queries/queries"
 import Country from "../country/country"
 import styles from "./allCountries.module.css"
 
+interface Props {
+  showDetails: Function
+}
+
 interface CountryData {
   code: string
   name: string
@@ -23,12 +27,12 @@ interface CountriesData {
   countries: CountryData[]
 }
 
-export default function AllCountries() {
+export default function AllCountries(props: Props) {
   const { loading, data } = useQuery<CountriesData>(getCountriesQuery)
+
   if (loading) {
     return <div className={styles.loading}>loading...</div>
   } else {
-    console.log(data)
     return (
       <div className={styles.container}>
         <div className={styles.heading}>
@@ -37,7 +41,7 @@ export default function AllCountries() {
         </div>
         <div className={styles.countries}>
           {data!.countries.slice(0, 8).map((country: CountryData, i: number) => {
-            return <Country key={i} country={country} />
+            return <Country key={i} country={country} showDetails={props.showDetails} />
           })}
         </div>
       </div>
