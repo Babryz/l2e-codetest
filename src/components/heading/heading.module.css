@@ -14,8 +14,7 @@
 }
 
 .title {
-  position: relative;
-  left: 80px;
+  margin: 0 80px 0 80px;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
@@ -33,4 +32,18 @@
   font-size: 16px;
   line-height: 24px;
   color: #ebeeff;
+}
+
+@media screen and (max-width: 925px) {
+  .title {
+    font-size: 30px;
+  }
+  .paragraph {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 725px) {
+  .container {
+    height: 200px;
+  }
 }

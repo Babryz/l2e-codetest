@@ -13,7 +13,7 @@
 
 .detailContainer {
   min-height: 121px;
-  width: 90%;
+  width: 100%;
   left: 211px;
   top: 695px;
   background: #3b445c;
@@ -42,7 +42,7 @@
 }
 
 .detailContainer > img {
-  margin: 24px 32px 24px 24px;
+  margin: 24px 32px 0 24px;
   width: 113px;
   height: 73px;
   object-fit: cover;
@@ -75,4 +75,22 @@
 
 .details > li:first-child {
   list-style: none;
+}
+
+@media screen and (max-width: 925px) {
+  .regularContainer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 725px) {
+  .detailContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  .details > li {
+    margin: 15px;
+  }
 }

@@ -50,8 +50,7 @@ export default function CountryDetails(props: Props) {
   } else {
     return (
       <div className={`${styles.container} country`}>
-        <div className={styles.box}>
-          <span>X</span>
+        <div className={`${styles.box} countryDetails`}>
           <div className={styles.heading}>
             <img src={`https://www.countryflags.io/${data!.country.code}/flat/64.png`} />
             <h4>{data?.country.name}</h4>
@@ -65,6 +64,9 @@ export default function CountryDetails(props: Props) {
               )
             })}
           </div>
+          <h6 className={styles.countriesCount}>
+            + {data!.country.continent.countries.length - 3} more
+          </h6>
         </div>
       </div>
     )

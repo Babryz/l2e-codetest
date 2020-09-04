@@ -1,3 +1,7 @@
+.container {
+  height: 100%;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -12,6 +16,7 @@
   position: absolute;
   width: 100px;
   min-height: 1360px;
+  height: 100%;
   left: 0px;
   top: 80px;
   background: #3b445c;
@@ -21,6 +26,7 @@
 .right {
   position: absolute;
   width: 318px;
+  height: 100%;
   min-height: 1360px;
   right: 0px;
   top: 80px;
@@ -33,4 +39,39 @@
   left: 211px;
   top: 160px;
   right: 429px;
+}
+
+@media screen and (max-width: 1154px) {
+  .right {
+    width: 100px;
+  }
+
+  .main {
+    right: 211px;
+  }
+}
+
+@media screen and (max-width: 925px) {
+  .right {
+    min-height: 1850px;
+  }
+
+  .left {
+    min-height: 1850px;
+  }
+}
+
+@media screen and (max-width: 625px) {
+  .right {
+    width: 20px;
+  }
+
+  .left {
+    width: 20px;
+  }
+
+  .main {
+    right: 50px;
+    left: 50px;
+  }
 }

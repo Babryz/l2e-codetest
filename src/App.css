@@ -5,8 +5,15 @@ body {
 
 .App {
   min-height: 1440px;
+  height: 100%;
   width: 100%;
   background: linear-gradient(360deg, #283044 0%, rgba(40, 48, 68, 0.83) 100%),
     url("./images/Ashe_0.jpg");
   background-size: cover;
+}
+
+@media screen and (max-width: 925px) {
+  .App {
+    min-height: 1930px;
+  }
 }

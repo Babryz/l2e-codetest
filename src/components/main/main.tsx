@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import styles from "./main.module.css"
 import Heading from "../heading/heading"
 import SearchBar from "../searchBar/searchBar"
@@ -16,12 +16,20 @@ const Main = () => {
   }
   const showDetails = (e: any) => {
     setCountryCode(e.target.id)
-    setIsOpen(!isOpen)
+    setIsOpen(true)
+  }
+  window.onclick = function (e: any) {
+    if (!e.target.matches(".countryDetails") && !e.target.matches(".regularCountry")) {
+      if (!isOpen) {
+        return
+      }
+      setIsOpen(false)
+    }
   }
   return (
     <>
       <header className={styles.header}></header>
-      <div>
+      <div className={styles.container}>
         <aside className={styles.left}></aside>
         <main className={styles.main}>
           <Heading />

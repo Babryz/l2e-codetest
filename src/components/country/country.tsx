@@ -32,9 +32,9 @@ const Country = (props: Props) => {
   const { country } = props
   return (
     <div
-      className={
+      className={`${
         props.renderedFrom === "details" ? styles.detailContainer : styles.regularContainer
-      }
+      } regularCountry`}
       id={country.code}
       onClick={(e) => setFunction(props.showDetails, e)}
     >
