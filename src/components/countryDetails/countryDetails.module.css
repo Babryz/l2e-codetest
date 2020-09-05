@@ -22,6 +22,10 @@
   animation-timing-function: ease-in;
 }
 
+.box > * {
+  pointer-events: none;
+}
+
 @keyframes modal {
   0% {
     max-height: 0;

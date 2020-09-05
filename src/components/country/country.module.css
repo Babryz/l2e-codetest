@@ -21,7 +21,6 @@
   border-radius: 3px;
   margin-bottom: 24px;
   display: flex;
-  cursor: pointer;
 }
 
 .regularContainer > * {
