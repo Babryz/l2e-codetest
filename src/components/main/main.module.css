@@ -12,6 +12,13 @@
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
 }
 
+.header > img {
+  position: relative;
+  max-width: 180px;
+  top: 20px;
+  left: 300px;
+}
+
 .left {
   position: absolute;
   width: 100px;
@@ -53,11 +60,22 @@
 
 @media screen and (max-width: 925px) {
   .right {
-    min-height: 1850px;
+    min-height: 1890px;
   }
 
   .left {
-    min-height: 1850px;
+    min-height: 1890px;
+  }
+  .header > img {
+    top: 20px;
+    left: 100px;
+  }
+}
+
+@media screen and (max-width: 725px) and (min-width: 626px) {
+  .main {
+    right: 130px;
+    left: 130px;
   }
 }
 
@@ -73,5 +91,15 @@
   .main {
     right: 50px;
     left: 50px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .right {
+    min-height: 2250px;
+  }
+
+  .left {
+    min-height: 2250px;
   }
 }

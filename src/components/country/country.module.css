@@ -80,6 +80,9 @@
   .regularContainer {
     width: 100%;
   }
+  .regularContainer:hover {
+    width: 98%;
+  }
 }
 
 @media screen and (max-width: 725px) {

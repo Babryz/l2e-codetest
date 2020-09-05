@@ -4,6 +4,7 @@ import Heading from "../heading/heading"
 import SearchBar from "../searchBar/searchBar"
 import Countries from "../countries/countries"
 import CountryDetails from "../countryDetails/countryDetails"
+import l2eLogo from "../../images/l2eLogo.png"
 
 const Main = () => {
   const [searchTerm, setSearhTerm] = useState("")
@@ -28,7 +29,9 @@ const Main = () => {
   }
   return (
     <>
-      <header className={styles.header}></header>
+      <header className={styles.header}>
+        <img src={l2eLogo} />
+      </header>
       <div className={styles.container}>
         <aside className={styles.left}></aside>
         <main className={styles.main}>

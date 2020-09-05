@@ -14,7 +14,7 @@ const SearchBar = (props: props) => {
         <form onSubmit={(e) => e.preventDefault()}>
           <input
             type="text"
-            placeholder="Search for a country"
+            placeholder={`Search for a country by code, i.e "SE" for sweden`}
             onKeyDown={(e) => props.search(e)}
           />
         </form>

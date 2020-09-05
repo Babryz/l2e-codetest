@@ -42,6 +42,7 @@
   font-size: 12px;
   line-height: 21px;
 }
+
 .searchBar > img {
   position: relative;
   left: 18px;
@@ -49,4 +50,10 @@
   max-width: 20px;
   max-height: 20px;
   transform: rotateZ(-20deg);
+}
+
+@media screen and (max-width: 450px) {
+  .searchBar > form > input::placeholder {
+    font-size: 8px;
+  }
 }
