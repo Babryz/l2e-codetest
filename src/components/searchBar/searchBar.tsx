@@ -10,12 +10,13 @@ const SearchBar = (props: props) => {
   return (
     <div className={styles.container}>
       <div className={styles.searchBar}>
-        <img src={icon} alt="" />
+        <img src={icon} />
         <form onSubmit={(e) => e.preventDefault()}>
           <input
             type="text"
             placeholder={`Search for a country by code, i.e "SE" for sweden`}
             onKeyDown={(e) => props.search(e)}
+            id={"search-bar"}
           />
         </form>
       </div>

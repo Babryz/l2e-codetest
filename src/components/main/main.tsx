@@ -7,12 +7,12 @@ import CountryDetails from "../countryDetails/countryDetails"
 import l2eLogo from "../../images/l2eLogo.png"
 
 const Main = () => {
-  const [searchTerm, setSearhTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState("")
   const [isOpen, setIsOpen] = useState(false)
   const [countryCode, setCountryCode] = useState("AE")
   const search = (e: any) => {
     if (e.key === "Enter") {
-      setSearhTerm(e.target.value.toUpperCase())
+      setSearchTerm(e.target.value.toUpperCase())
     }
   }
   const showDetails = (e: any) => {
