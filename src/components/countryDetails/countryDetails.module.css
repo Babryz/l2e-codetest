@@ -9,7 +9,7 @@
 .box {
   position: relative;
   z-index: 1;
-  width: 400px;
+  width: 692px;
   top: 10%;
   left: 15%;
   overflow: auto;
@@ -47,6 +47,7 @@
   width: 234px;
   height: 180px;
   border-radius: 3px;
+  margin-top: 60px;
 }
 
 .heading > h4 {
@@ -78,13 +79,14 @@
 }
 
 .countries > p {
+  align-self: flex-start;
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 21px;
   color: #cdd7ec;
-  padding: 16px;
+  padding: 16px 16px 16px 0;
 }
 
 .countriesCount {
@@ -108,6 +110,9 @@
 @media screen and (max-width: 925px) {
   .box {
     width: 300px;
+  }
+  .heading > img {
+    margin-top: 0;
   }
 }
 

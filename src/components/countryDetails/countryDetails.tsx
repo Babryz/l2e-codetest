@@ -48,6 +48,9 @@ export default function CountryDetails(props: Props) {
   if (loading) {
     return <div className={styles.loading}>loading...</div>
   } else {
+    const countries = data!.country.continent.countries.filter(
+      (country) => country.code !== data!.country.code
+    )
     return (
       <div className={`${styles.container} country`}>
         <div className={`${styles.box} countryDetails`}>
@@ -58,7 +61,7 @@ export default function CountryDetails(props: Props) {
           </div>
           <div className={styles.countries}>
             <p>Other Countries in {data?.country.continent.name}</p>
-            {data!.country.continent.countries.slice(0, 3).map((country: country, i: number) => {
+            {countries.slice(0, 3).map((country: country, i: number) => {
               return (
                 <Country renderedFrom={"details"} showDetails={null} country={country} key={i} />
               )
