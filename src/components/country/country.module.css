@@ -1,10 +1,6 @@
-.regularContainer {
+.regularContainer,
+.detailContainer {
   min-height: 121px;
-  width: 49%;
-  left: 211px;
-  top: 695px;
-  background: #3b445c;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   margin-bottom: 24px;
   display: flex;
@@ -12,15 +8,11 @@
 }
 
 .detailContainer {
-  min-height: 121px;
   width: 100%;
-  left: 211px;
-  top: 695px;
-  background: #3b445c;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
-  border-radius: 3px;
-  margin-bottom: 24px;
-  display: flex;
+}
+
+.regularContainer {
+  width: 49%;
 }
 
 .regularContainer > * {
@@ -28,33 +20,31 @@
 }
 
 .regularContainer:hover {
-  border: 1px solid #111010;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+  background: #667397;
   width: 50%;
 }
 
 .regularContainer > img {
-  margin: 24px 32px 24px 24px;
+  margin: 24px;
   width: 113px;
   height: 73px;
   object-fit: cover;
 }
 
 .detailContainer > img {
-  margin: 24px 32px 0 24px;
+  margin: 24px 24px 0 24px;
   width: 113px;
   height: 73px;
   object-fit: cover;
 }
 
+.info {
+  padding: 32px 0;
+}
+
 .info > h6 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
   font-size: 20px;
-  line-height: 23px;
-  color: #ebeeff;
-  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 .details {
@@ -64,11 +54,7 @@
 
 .details > li {
   margin-right: 22px;
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
-  line-height: 19px;
   color: #b2bbd5;
 }
 
@@ -89,10 +75,12 @@
   .detailContainer {
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     text-align: center;
   }
+  .details {
+    justify-content: center;
+  }
   .details > li {
-    margin: 15px;
+    margin: 0 10px;
   }
 }
