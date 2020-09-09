@@ -34,7 +34,7 @@ const Country = (props: Props) => {
     <div
       className={`${
         props.renderedFrom === "details" ? styles.detailContainer : styles.regularContainer
-      } regularCountry`}
+      } regularCountry bg-oxford shadowed`}
       id={country.code}
       onClick={(e) => setFunction(props.showDetails, e)}
     >

@@ -1,18 +1,14 @@
 .container {
-  height: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header {
-  position: absolute;
   width: 100%;
   height: 80px;
-  left: 0px;
-  top: 0px;
-  background: #3b445c;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
 }
 
-.header > img {
+.header img {
   position: relative;
   max-width: 180px;
   top: 20px;
@@ -20,86 +16,34 @@
 }
 
 .left {
-  position: absolute;
-  width: 100px;
-  min-height: 1360px;
-  height: 100%;
-  left: 0px;
-  top: 80px;
-  background: #3b445c;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+  width: 5%;
 }
 
 .right {
-  position: absolute;
-  width: 318px;
-  height: 100%;
-  min-height: 1360px;
-  right: 0px;
-  top: 80px;
-  background: #3b445c;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+  width: 16.6%;
 }
 
 .main {
-  position: absolute;
-  left: 211px;
-  top: 160px;
-  right: 429px;
-}
-
-@media screen and (max-width: 1154px) {
-  .right {
-    width: 100px;
-  }
-
-  .main {
-    right: 211px;
-  }
+  width: 78%;
+  margin: 80px 111px;
 }
 
 @media screen and (max-width: 925px) {
-  .right {
-    min-height: 1890px;
-  }
-
-  .left {
-    min-height: 1890px;
-  }
   .header > img {
     top: 20px;
     left: 100px;
   }
-}
-
-@media screen and (max-width: 725px) and (min-width: 626px) {
   .main {
-    right: 130px;
-    left: 130px;
-  }
-}
-
-@media screen and (max-width: 625px) {
-  .right {
-    width: 20px;
-  }
-
-  .left {
-    width: 20px;
-  }
-
-  .main {
-    right: 50px;
-    left: 50px;
+    margin: 40px 60px;
   }
 }
 
 @media screen and (max-width: 430px) {
-  .right {
-    min-height: 2250px;
-  }
-
+  .right,
   .left {
-    min-height: 2250px;
+    display: none;
+  }
+  .main {
+    margin: 20px auto;
   }
 }

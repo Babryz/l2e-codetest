@@ -39,7 +39,7 @@ export default function SearchCountries(props: props) {
     },
   })
   if (loading) {
-    return <div className={styles.loading}>loading...</div>
+    return <div className={styles.loading}>Loading...</div>
   } else {
     return (
       <div className={styles.container}>

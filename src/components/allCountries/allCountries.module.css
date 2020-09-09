@@ -1,22 +1,15 @@
+.heading {
+  margin-bottom: 16px;
+}
+
 .heading > h6 {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
   font-size: 20px;
-  line-height: 23px;
-  color: #ebeeff;
 }
 
 .heading > p {
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: normal;
   font-size: 12px;
   line-height: 19px;
-  display: flex;
-  align-items: center;
   color: #b2bbd5;
-  margin-bottom: 16px;
 }
 
 .countries {
@@ -26,8 +19,6 @@
 }
 
 .loading {
-  color: #ebeeff;
   font-size: 24px;
   text-align: center;
-  font-family: Roboto;
 }

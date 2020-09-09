@@ -53,7 +53,7 @@ export default function CountryDetails(props: Props) {
     )
     return (
       <div className={`${styles.container} country`}>
-        <div className={`${styles.box} countryDetails`}>
+        <div className={`${styles.box} countryDetails bg-oxford shadowed`}>
           <div className={styles.heading}>
             <img src={`https://www.countryflags.io/${data!.country.code}/flat/64.png`} />
             <h4>{data?.country.name}</h4>

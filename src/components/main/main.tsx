@@ -29,11 +29,11 @@ const Main = () => {
   }
   return (
     <>
-      <header className={styles.header}>
+      <header className={`${styles.header} bg-oxford shadowed`}>
         <img src={l2eLogo} />
       </header>
       <div className={styles.container}>
-        <aside className={styles.left}></aside>
+        <aside className={`${styles.left} bg-oxford shadowed`}></aside>
         <main className={styles.main}>
           <Heading />
           <SearchBar search={search} />
@@ -45,7 +45,7 @@ const Main = () => {
 
           <Countries showDetails={showDetails} searchTerm={searchTerm} />
         </main>
-        <aside className={styles.right}></aside>
+        <aside className={`${styles.right} bg-oxford shadowed`}></aside>
       </div>
     </>
   )

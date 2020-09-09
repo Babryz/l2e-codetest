@@ -8,7 +8,7 @@ interface props {
 
 const SearchBar = (props: props) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} bg-oxford shadowed`}>
       <div className={styles.searchBar}>
         <img src={icon} />
         <form onSubmit={(e) => e.preventDefault()}>
