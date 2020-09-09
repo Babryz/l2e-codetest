@@ -7,7 +7,6 @@ body {
 }
 
 .App {
-  min-height: 1440px;
   width: 100%;
   background: linear-gradient(360deg, #283044 0%, rgba(40, 48, 68, 0.83) 100%),
     url("./images/Ashe_0.jpg");
@@ -20,16 +19,4 @@ body {
 
 .shadowed {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
-}
-
-@media screen and (max-width: 925px) {
-  .App {
-    min-height: 1970px;
-  }
-}
-
-@media screen and (max-width: 430px) {
-  .App {
-    min-height: 2330px;
-  }
 }

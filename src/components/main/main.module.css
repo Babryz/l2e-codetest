@@ -1,5 +1,4 @@
 .container {
-  height: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -18,12 +17,10 @@
 
 .left {
   width: 5%;
-  min-height: 1360px;
 }
 
 .right {
   width: 16.6%;
-  min-height: 1360px;
 }
 
 .main {
@@ -32,10 +29,6 @@
 }
 
 @media screen and (max-width: 925px) {
-  .right,
-  .left {
-    min-height: 1890px;
-  }
   .header > img {
     top: 20px;
     left: 100px;
