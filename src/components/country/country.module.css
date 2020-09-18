@@ -21,7 +21,7 @@
 
 .regularContainer:hover {
   background: #667397;
-  width: 50%;
+  box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.3);
 }
 
 .regularContainer > img {
