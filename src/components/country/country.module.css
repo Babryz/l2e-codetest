@@ -13,6 +13,8 @@
 
 .regularContainer {
   width: 49%;
+  transition: ease-in;
+  transition-duration: 100ms;
 }
 
 .regularContainer > * {
